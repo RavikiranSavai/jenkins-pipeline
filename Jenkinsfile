@@ -144,17 +144,17 @@ pipeline {
 			
 		}
 
-		stage('Push Docker Image') {
-			steps {
-				script {
-					docker.withRegistry( '', 'dockerhub' ) {
-						dockerImage.push()
-						dockerImage.push('latest')
-					}
-				}
-			}
+		//stage('Push Docker Image') {
+		//	steps {
+		//		script {
+				//	docker.withRegistry( '', 'dockerhub' ) {
+		//				dockerImage.push()
+				//		dockerImage.push('latest')
+				//	}
+			//	}
+		//	}
 			
-		}
+		//}
 
 	}
 	post {
