@@ -109,17 +109,17 @@ pipeline {
 			}
 		}
 
-		 stage('Test'){
-			steps {
-		 		sh "mvn test"
-		 	}
-		}
+		// stage('Test'){
+		// 	steps {
+		// 		sh "mvn test"
+		// 	}
+		// }
 
-		stage('Integration Test'){
-		 	steps {
-		  		sh "mvn failsafe:integration-test failsafe:verify"
-		 	}
-		 }
+		// stage('Integration Test'){
+		// 	steps {
+		// 		sh "mvn failsafe:integration-test failsafe:verify"
+		// 	}
+		// }
 
 		stage('Package'){
 			steps {
@@ -136,7 +136,7 @@ pipeline {
 
 		stage('Build Docker Image') {
 			steps {
-				sh "docker build -t rangakaranam/currency-exchange-azure:$env.BUILD_TAG  --pull --no-cache ."
+				//sh "docker build -t rangakaranam/currency-exchange-azure:$env.BUILD_TAG  --pull --no-cache ."
 				script {
 					dockerImage = docker.build("rangakaranam/currency-exchange-azure:${env.BUILD_ID}")
 				}
