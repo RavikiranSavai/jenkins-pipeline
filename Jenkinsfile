@@ -8,15 +8,20 @@
 //SCRIPTED PIPELINES
 //Node - a machine to run the pipelines
 //Stage blocks are optional in scripted pipelines
-// node {
-// 	stage('Build') {
-// 		echo "Build"
-// 	}
-// 	stage('Test') {
-// 		echo "Test"
-// 	}
-// }
-
+ node {
+ 	stage('Build') {
+ 		echo "Build"
+ 	}
+ 	stage('Test') {
+ 		echo "Test"
+ 	}
+	 stage('Deploy') {
+ 		echo "Test"
+ 	}stage('post') {
+ 		echo "Test"
+ 	}
+ }
+/*
 //We are using declarative syntax - All your pipeline definition is in the pipeline block.
 
 //Poll every minute
@@ -177,3 +182,4 @@ pipeline {
     }
 
 }
+*/
