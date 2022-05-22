@@ -11,3 +11,16 @@
  		echo "Test"
  	}
  }
+node {
+	stage('build'){
+		echo "Build"
+	}
+	stage('test'){
+		echo "Deploy"
+	}
+	stage('Deploy'){
+		echo "Deploy"
+	}stage('Post'){
+		echo "Post"
+	}
+}
